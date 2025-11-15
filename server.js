@@ -28,6 +28,10 @@ connectDB().then(() => {
     res.json({ message: "Streetwear Store API is running!" });
   });
 
+  // Importar e usar rotas
+  const userRoutes = require("./routes/userRoutes");
+  app.use("/api/users", userRoutes);
+
   // Iniciar o servidor
   app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
