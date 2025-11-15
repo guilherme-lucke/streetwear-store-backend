@@ -31,6 +31,8 @@ connectDB().then(() => {
   // Importar e usar rotas
   const userRoutes = require("./routes/userRoutes");
   app.use("/api/users", userRoutes);
+  const productRoutes = require("./routes/productRoutes");
+  app.use("/api/products", productRoutes);
 
   // Iniciar o servidor
   app.listen(PORT, () => {
