@@ -33,6 +33,8 @@ connectDB().then(() => {
   app.use("/api/users", userRoutes);
   const productRoutes = require("./routes/productRoutes");
   app.use("/api/products", productRoutes);
+  const orderRoutes = require("./routes/orderRoutes");
+  app.use("/api/orders", orderRoutes);
 
   // Iniciar o servidor
   app.listen(PORT, () => {
